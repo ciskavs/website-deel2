@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3IncludeHtml");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            elmnt.innerHTML = "Page not found.";
+                        }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("w3IncludeHtml");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    };
+
+    function handleMenuClick(data) {
+        var href = data.getAttribute("data-item");
+        var contentDiv = document.getElementById("content-sectie");
+        contentDiv.setAttribute("w3IncludeHtml", href);
+        includeHTML();
+        window.scrollTo(0,0);
+    }
+</script>
+
+<head>
+    <title>Beginner HTML/CSS website maken</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Load jQuery before bootstrap.js, else it won't work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="css/bootstrap.min.js"></script>
+
+    <!-- Importeer de css voor het > teken voor in links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row col-12 rose no-gutters">
+          <div class="col-3">
+              <img alt="" class="img-responsive" src="images/banner.png">
+          </div>
+            <div class="col-9 my-auto">
+                <h1 class="title">Vervolg HTML/CSS</h1>
+                <p class="subtitle">Maak je website nóg mooier</p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 32px; margin-right: 32px;">
+            <div class="col-3">
+                <ul class="menu">
+                    <li>
+                        <a href="#" data-item="intro.html" onclick="handleMenuClick(this)">Introductie</a>
+                        <a href="#" data-item="setup.html" onclick="handleMenuClick(this)">Klaarzetten</a>
+                        <a href="#" data-item="colors.html" onclick="handleMenuClick(this)">Alle kleuren!</a>
+                        <a href="#" data-item="organise.html" onclick="handleMenuClick(this)">Je site indelen</a>
+                        <a href="#" data-item="themes.html" onclick="handleMenuClick(this)">Ontwerp thema's</a>
+                        <a href="#" data-item="indiv.html" onclick="handleMenuClick(this)">Je eigen style</a>
+                        <a href="#" data-item="other.html" onclick="handleMenuClick(this)">Code op een andere website bekijken</a>
+                        <a href="#" data-item="adjustsize.html" onclick="handleMenuClick(this)">Grootte aanpassen</a>
+                        <a href="#" data-item="animation.html" onclick="handleMenuClick(this)">Animaties</a>
+                        <a href="#" data-item="tito.html" onclick="handleMenuClick(this)">Leer Tito omrollen!</a>
+                        <a href="#" data-item="next.html" onclick="handleMenuClick(this)">En verder</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9">
+                <section>
+                    <div id="content-sectie" w3IncludeHtml="intro.html"></div>
+                </section>
+            </div>
+        </div>
+
+        <script>
+            includeHTML();
+        </script>
+</body>
+
+</html>
