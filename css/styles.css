@@ -47,3 +47,8 @@ ul.menu li a {
 #content-sectie {
     margin-top: 32px;
 }
+
+ul.menu li a.bezig {
+  color: #f3524f;
+  font-weight: bold;
+}

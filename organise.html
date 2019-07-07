@@ -2,13 +2,67 @@
 <html lang="nl">
 
 <head>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
 </head>
 
 <body>
     <h2>Je site indelen</h2>
-    <p></p>
+    <p>
+        Tot nu toe heb je <strong>headings</strong> (kopjes) en <strong>paragrafen</strong> (alinea's) gebruikt om je <strong>content</strong> (inhoud: alles op je website zoals tekst en plaatjes) er netjes en gemakkelijk leesbaar uit te laten zien. Laten
+        we het nog beter indelen door dingen samen te voegen.
+    </p>
+
+    <ul>
+        <li>
+            Ga naar het bestand <code>attractions.html</code> (of een van je eigen pagina's als je het voorbeeldproject niet gebruikt) en typ onder de opening <code>&lt;main&gt;</code> tag, het volgende op een nieuwe regel:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+          &lt;<span class="pink">main</span>&gt;<br />
+          <span style="padding-left:24px;">&lt;<span class="pink">article</span>&gt;</span>
+        </code>
+    </div>
+
+    <ul>
+        <li>
+            Als Trinket automatisch een afsluitende <code>&lt;/article&gt;</code> tag heeft toegevoegd, haal die dan weg.
+        </li>
+        <li>
+            Onderaan het bestand, net <strong>boven</strong> de afsluitende <code>&lt;/main&gt;</code> tag, voeg je een nieuwe regel toe en sluit je het <code>&lt;article&gt;</code> element:
+        </li>
+    </ul>
+    <div class="codeblock">
+        <code style="background-color:black;">
+          <span style="padding-left:24px;">&lt;/<span class="pink">article</span>&gt;</span><br />
+          &lt;/<span class="pink">main</span>&gt;
+        </code>
+    </div>
+    <p>
+        Je <code>main</code> element zou er nu ongeveer zo uit moeten zien (je kan natuurlijk andere inhoud hebben tussen de <code>article</code> tags):
+    </p>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+          &lt;<span class="pink">main</span>&gt;<br />
+          <span style="padding-left:24px;">&lt;<span class="pink">article</span>&gt;</span><br />
+          <span style="padding-left:48px;">&lt;<span class="pink">h1</span>&gt;</span>Welkom in Leiden!&lt;/<span class="pink">h1</span>&gt;<br />
+          <span style="padding-left:48px;">&lt;<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:72px;">Mijn website gaat over Leiden.</span><br />
+          <span style="padding-left:48px;">&lt;/<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:48px;">&lt;<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:72px;">Klik op de links in het bovenstaande menu en ontdek wat er te beleven is op deze site!</span><br />
+          <span style="padding-left:48px;">&lt;/<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:48px;">&lt;<span class="pink">img src</span>="<span class="green">tito.png</span>" <span class="pink">alt</span>="<span class="green">Tito the dog</span>" <span class="pink">width</span>="<span class="green">100px</span>"  /&gt;</span><br />
+          <span style="padding-left:48px;">&lt;<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:72px;">Dit is Tito. Hij is je gids. Zoals je ziet, houdt Tito van CoderDojo.</span><br />
+          <span style="padding-left:48px;">&lt;/<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:24px;">&lt;/<span class="pink">article</span>&gt;</span><br />
+          &lt;/<span class="pink">main</span>&gt;
+        </code>
+    </div>
 
     <div class="buttonbar">
         <button id="back" data-item="colors.html" onclick="handleMenuClick(this)">

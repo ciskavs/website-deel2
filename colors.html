@@ -2,13 +2,151 @@
 <html lang="nl">
 
 <head>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
 </head>
 
 <body>
     <h2>Alle kleuren!</h2>
-    <p></p>
+    <p>
+        Zoals je al eerder hebt gezien, kun je de namen van veel verschillende kleuren intypen. De browser zal ze herkennen. Maar een meer gebruikelijke manier om kleuren in te stellen is om iets te gebruiken dat <strong>hex-codes</strong> heet ('hex'
+        is een afkorting van <strong>hexadecimaal</strong>, een speciale manier om te tellen).
+    </p>
+    <ul>
+        <li>
+            Bekijk je <strong>stylesheet</strong>. Dat is het bestand met <code>.css</code> in de naam.
+        </li>
+        <li>
+            Binnen de CSS-regels voor <code>body</code> zet je de achtergrondkleur op de hex-code <code>#7B68EE</code>:
+        </li>
+    </ul>
+    <div class="codeblock">
+        <code style="background-color:black;">
+            background-color: #7B68EE;
+        </code>
+    </div>
+    <p>
+        N.B. als je een Mac gebruikt, kun je <code>#</code> typen door tegelijkertijd op de <var>alt</var> en de <var>3</var> toetsen te drukken.
+    </p>
+    <p>
+        Je website zou nu een paarse achtergrond moeten hebben.
+    </p>
+    <img src="images/background-color.png" alt="" class="img-responsive">
+    <br />
+    <ul>
+        <li>
+            Geen fan van paars? Ga naar <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">deze website</a> en kies een andere kleur voor je stylesheet. Typ in plaats van de naam van de kleur de hex-code in.
+        </li>
+    </ul>
+    <img src="images/hexcolors.png" alt="" class="img-responsive">
+    <br />
+    <p>
+        Op de website van <a href="https://wikikids.nl/Gebruiker:Knowledge/kleurenoverzicht" target="_blank">wikikids</a> kun je ook een aantal kleurcodes vinden. Met kleurcodes kan je elke kleur maken, zelfs als deze niet op een lijst met kleurnamen
+        staat.
+    </p>
+    <ul>
+        <li>
+            Probeer je eigen kleurcode op te stellen. Het moet beginnen met een <code>#</code>. Dit vertelt de browser dat het een hex-code is in plaats van een kleurnaam. De rest van de code bestaat uit zes tekens. Dit kan elk nummer zijn van <strong>0 tot 9</strong>            en elke letter van <strong>A tot F</strong>.
+        </li>
+    </ul>
+
+    <div class="accordion" id="hexColorsExplained">
+        <div class="card collapseCard">
+            <button class="btn collapseButton" type="button" data-toggle="collapse" data-target="#collapseHexColorsExplained" aria-expanded="true" aria-controls="collapseHexColorsExplained">
+              <div class="card-header collapseHeader" id="headingHexColorsExplained">
+                <h2 class="mb-0">
+                  <img src="images/info.svg" alt="" class="left small-icon"/>
+                  <span class="collapseText left">Hoe werkt een hex-code?</span>
+                  <i class="fas fa-angle-down collapseIcon"></i>
+                </h2>
+              </div>
+            </button>
+
+            <div id="collapseHexColorsExplained" class="collapse hide" aria-labelledby="headingHexColorsExplained" data-parent="#hexColorsExplained">
+                <div class="card-body">
+                    <p>
+                        Elke kleur wordt gemaakt door verschillende hoeveelheden <strong>rood</strong>, <strong>groen</strong> en <strong>blauw</strong> te mengen. Je zult dit soms zien opgeschreven als RGB. Elk van deze kleuren wordt weergegeven door
+                        twee van de zes cijfers in de HEX-code. <code>00</code> is het laagste en <code>FF</code> is het hoogste.
+                    </p>
+                    <p>
+                        <strong>Hexadecimaal</strong> is een manier van tellen waarmee je getallen korter op kan schrijven. Dit doe je door de letters A-F als extra cijfers te gebruiken. Het getal <code>255</code> wordt geschreven als <code>FF</code>                        in hexadecimaal. Gelukkig hoef je niet te leren tellen met hexadecimale getallen. Experimenteer met verschillende hex-codes om te wennen aan het gebruik ervan.
+                    </p>
+                    <ul>
+                        <li>
+                            Hier zijn enkele basiskleuren om uit te proberen op je website. Probeer kleinere getallen in plaats van <code>FF</code> in te voegen om te zien hoe de tinten veranderen.
+                        </li>
+                    </ul>
+                    <table>
+                        <tr>
+                            <th style="width: 20px;"></th>
+                            <th style="width: 35px;"><strong>R</strong></th>
+                            <th style="width: 35px;"><strong>G</strong></th>
+                            <th style="width: 35px;"><strong>B</strong></th>
+                            <th><strong>Resultaat</strong></th>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>FF</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>Rood</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>00</td>
+                            <td>FF</td>
+                            <td>00</td>
+                            <td>Groen</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>FF</td>
+                            <td>Blauw</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>FF</td>
+                            <td>FF</td>
+                            <td>00</td>
+                            <td>Geel</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>FF</td>
+                            <td>00</td>
+                            <td>FF</td>
+                            <td>Roodpaars</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>00</td>
+                            <td>FF</td>
+                            <td>FF</td>
+                            <td>Cyaan blauw</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>FF</td>
+                            <td>8c</td>
+                            <td>00</td>
+                            <td>Donker oranje</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        Om de perfecte kleur te krijgen, moet je veel experimenteren. Gelukkig zijn er online veel tools waarmee je de hex-code kunt krijgen voor elke gewenste kleur.
+    </p>
+    <ul>
+        <li>
+            Probeer <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">deze kleurenkiezer</a> uit om een aantal hex-kleurcodes te kiezen voor de rest van de stijlen op je website.
+        </li>
+    </ul>
 
     <div class="buttonbar">
         <button id="back" data-item="setup.html" onclick="handleMenuClick(this)">

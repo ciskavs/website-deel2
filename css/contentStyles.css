@@ -22,6 +22,10 @@ img {
   max-width: 100%;
 }
 
+var {
+    font-family: monospace;
+}
+
 .codeblock {
   background-color: black;
   color: #fff;

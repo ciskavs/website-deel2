@@ -39,6 +39,14 @@
         contentDiv.setAttribute("w3IncludeHtml", href);
         includeHTML();
         window.scrollTo(0,0);
+
+        /* Only the current page should have a different coloured link in the menu */
+        var previousPage = document.getElementsByClassName('bezig');
+        if (previousPage.length > 0) {
+          previousPage[0].classList.remove('bezig');
+        }
+        var currentPage = document.getElementById(href);
+        currentPage.classList.add('bezig');
     }
 </script>
 
@@ -71,17 +79,17 @@
             <div class="col-3">
                 <ul class="menu">
                     <li>
-                        <a href="#" data-item="intro.html" onclick="handleMenuClick(this)">Introductie</a>
-                        <a href="#" data-item="setup.html" onclick="handleMenuClick(this)">Klaarzetten</a>
-                        <a href="#" data-item="colors.html" onclick="handleMenuClick(this)">Alle kleuren!</a>
-                        <a href="#" data-item="organise.html" onclick="handleMenuClick(this)">Je site indelen</a>
-                        <a href="#" data-item="themes.html" onclick="handleMenuClick(this)">Ontwerp thema's</a>
-                        <a href="#" data-item="indiv.html" onclick="handleMenuClick(this)">Je eigen style</a>
-                        <a href="#" data-item="other.html" onclick="handleMenuClick(this)">Code op een andere website bekijken</a>
-                        <a href="#" data-item="adjustsize.html" onclick="handleMenuClick(this)">Grootte aanpassen</a>
-                        <a href="#" data-item="animation.html" onclick="handleMenuClick(this)">Animaties</a>
-                        <a href="#" data-item="tito.html" onclick="handleMenuClick(this)">Leer Tito omrollen!</a>
-                        <a href="#" data-item="next.html" onclick="handleMenuClick(this)">En verder</a>
+                        <a href="#" id="intro.html" data-item="intro.html" class="bezig" onclick="handleMenuClick(this)">Introductie</a>
+                        <a href="#" id="setup.html" data-item="setup.html" onclick="handleMenuClick(this)">Klaarzetten</a>
+                        <a href="#" id="colors.html" data-item="colors.html" onclick="handleMenuClick(this)">Alle kleuren!</a>
+                        <a href="#" id="organise.html" data-item="organise.html" onclick="handleMenuClick(this)">Je site indelen</a>
+                        <a href="#" id="themes.html" data-item="themes.html" onclick="handleMenuClick(this)">Ontwerp thema's</a>
+                        <a href="#" id="indiv.html" data-item="indiv.html" onclick="handleMenuClick(this)">Je eigen style</a>
+                        <a href="#" id="other.html" data-item="other.html" onclick="handleMenuClick(this)">Code op een andere website bekijken</a>
+                        <a href="#" id="adjustsize.html" data-item="adjustsize.html" onclick="handleMenuClick(this)">Grootte aanpassen</a>
+                        <a href="#" id="animation.html" data-item="animation.html" onclick="handleMenuClick(this)">Animaties</a>
+                        <a href="#" id="tito.html" data-item="tito.html" onclick="handleMenuClick(this)">Leer Tito omrollen!</a>
+                        <a href="#" id="next.html" data-item="next.html" onclick="handleMenuClick(this)">En verder</a>
                     </li>
                 </ul>
             </div>
