@@ -2,20 +2,260 @@
 <html lang="nl">
 
 <head>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
 </head>
 
 <body>
     <h2>Ontwerp thema's</h2>
-    <p></p>
+    <p>
+        Het schrijven van CSS-regels voor elementen zoals <code>section</code> en <code>p</code> is geweldig, maar wat als je wilt dat sommige ervan er anders uitzien dan andere? Hier leer je hoe je verschillende sets stijlregels toepast op elementen
+        van hetzelfde type en een ander thema maakt voor elke pagina op je website!
+    </p>
+
+    <ul>
+        <li>
+            Ga naar je stylesheet-bestand <code>styles.css</code> en voeg het volgende toe - zorg ervoor dat je de stip vooraan plaatst!
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">.lijnErboven</span> { <br />
+        <span style="padding-left:24px;"><span class="oker">border-top-style</span>: solid;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border-top-width</span>: 2px;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border-top-color</span>: #F5FFFA;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">padding-bottom</span>: 10px;<br /></span>
+        }<br />
+      </code>
+    </div>
+
+    <ul>
+        <li>
+            Ga nu naar <code>attracties.html</code> (of het HTML-bestand waaraan je werkt als je je eigen project gebruikt) en voeg het volgende <strong>attribuut</strong> toe aan elke <code>section</code> tag:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+          &lt;<span class="pink">section class</span>="<span class="green">lijnErboven</span>"&gt;
+        </code>
+    </div>
+
+    <p>
+        Je zou boven elke sectie op de pagina een lijn moeten zien verschijnen. Gefeliciteerd - je hebt zojuist je eerste <strong>CSS-class</strong> gebruikt!
+    </p>
+
+    <img src="images/theme-class.png" alt="" class="img-responsive">
+    <br />
+
+    <ul>
+        <li>
+            Kijk hoe je webpagina er nu uitziet en vergelijk deze met de andere pagina's met <code>section</code> tags. Je zal zien dat alleen de regels waaraan je het attribuut <code>class="lijnErboven"</code> hebt toegevoegd, de lijn bovenaan hebben.
+        </li>
+    </ul>
+
+    <div class="accordion" id="cssClassExplained">
+        <div class="card collapseCard">
+            <button class="btn collapseButton" type="button" data-toggle="collapse" data-target="#collapseCssClassExplained" aria-expanded="true" aria-controls="collapseCssClassExplained">
+              <div class="card-header collapseHeader" id="headingCssClassExplained">
+                <h2 class="mb-0">
+                  <img src="images/info.svg" alt="" class="left small-icon"/>
+                  <span class="collapseText left">Hoe werkt het?</span>
+                  <i class="fas fa-angle-down collapseIcon"></i>
+                </h2>
+              </div>
+            </button>
+
+            <div id="collapseCssClassExplained" class="collapse hide" aria-labelledby="headingCssClassExplained" data-parent="#cssClassExplained">
+                <div class="card-body">
+
+                    <p>
+                        Onthoudt dat als je een CSS <strong>selector</strong> zoals <code>section</code> of <code>p</code> of
+                        <code>nav ul</code> gebruikt, de stijlregels van toepassing zijn op <strong>alle</strong> elementen van dat type op je website.
+                    </p>
+                    <p>
+                        Met CSS <strong>class</strong> kun je de stijl van <strong>enkele</strong> elementen wijzigen.
+                    </p>
+                    <p>
+                        Door een punt vóór de selector te zetten, wordt het een <strong>class selector</strong>. Een klasse kan elke naam hebben, dus het hoeft niet de naam van een HTML-element te zijn. Bijvoorbeeld:
+                    </p>
+
+                    <div class="codeblock">
+                        <code style="background-color:black;">
+                          <span class="purple">.mijnToffeClass</span> {<br />
+                            /* mijn toffe stijlregels komen hier! */ <br />
+                          }
+                        </code>
+                    </div>
+
+                    <p>
+                        Om aan te geven op welke elementen de stijlregels van toepassing zijn, voeg je het <code>class</code>
+                        <strong>attribuut</strong> toe aan die elementen in de HTML-code: typ de naam van de class als de waarde voor het attribuut, <strong>zonder</strong> de punt, zoals deze:
+                    </p>
+
+                    <div class="codeblock">
+                        <code style="background-color:black;">
+                          class="myAwesomeClass"
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li>
+            Zullen we nog een class toevoegen? Pas de volgende CSS-code aan in <code>styles.css</code>:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">.vetKader</span> { <br />
+        <span style="padding-left:24px;"><span class="oker">background-color</span>: #87CEFA;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">color</span>: #A52A2A;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border-style</span>: solid;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border-width</span>: 2px;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border-color</span>: #F5FFFA;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border-radius</span>: 10px;<br /></span>
+        }<br />
+      </code>
+    </div>
+
+    <ul>
+        <li>
+            Voeg nu op een andere pagina van je website de class toe aan een paar elementen. In het voorbeeld voegen we het toe aan de <code>section</code> tags op de Eetgelegenheden pagina van de website, als volgt:
+            <code>&lt;section class="vetKader"&gt;</code>.
+        </li>
+    </ul>
+    <p>
+        Het ziet er vet uit, maar nu zijn de secties allemaal samen geplet.
+    </p>
+    <img src="images/vet-kader.png" alt="" class="img-responsive">
+    <br />
+
+    <p>
+        Je kan zoveel CSS classes aan een element toevoegen als je maar wil. Schrijf gewoon de namen van alle klassen die je wil gebruiken binnen het <code>class</code> attribuut (vergeet niet: zonder de punt!), met spaties ertussen.
+    </p>
+
+    <ul>
+        <li>
+            Laten we nog een CSS class maken om de secties wat ruimte en opvulling te geven. Maak in het bestand <code>styles.css</code> de volgende CSS class:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">.beetjeRuimte</span> { <br />
+        <span style="padding-left:24px;"><span class="oker">padding</span>: 10px;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">margin-top</span>: 20px;<br /></span>
+        }<br />
+      </code>
+    </div>
+
+    <ul>
+        <li>
+            Voeg in je <code>html</code> code de nieuwe class toe aan elk van de <code>section</code> tags waar je aan werkte, zoals dit:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="pink">&lt;section class</span>="<span class="green">vetKader beetjeRuimte</span>"&gt;</span>
+      </code>
+    </div>
+
+    <img src="images/beetje-ruimte.png" alt="" class="img-responsive">
+    <br />
+
+    <p>
+        Met CSS classes kun je dus <strong>kiezen</strong> welke elementen je wilt opmaken en je kan dezelfde set stijlregels
+        <strong>hergebruiken</strong> voor alle elementen die je wilt.
+    </p>
+    <ul>
+        <li>
+            Ga naar <code>index.html</code> en voeg de klasse <code>vetKader</code> toe aan het <code>main</code> of een ander element op de pagina. Je kunt het later weer verwijderen!
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="pink">&lt;main class</span>="<span class="green">vetKader</span>"&gt;</span>
+      </code>
+    </div>
+
+    <p>
+        Zo ziet mijn home pagina eruit met de CSS class. De class lijnErboven is ook aan de <code>img</code> tag toegevoegd met de afbeelding van Tito.
+    </p>
+    <img src="images/lijn-erboven.png" alt="" class="img-responsive">
+    <br />
+
+    <h3>Uitdaging: maak zelf nieuwe classes</h3>
+    <p>
+        Gebruik CSS <strong>classes</strong> om een paar verschillende formaten voor je afbeeldingen te maken, bijvoorbeeld
+        <code>.kleineAfbeelding</code> en <code>.grotereAfbeelding</code>. Haal vervolgens het attribuut <code>width</code> van elk van de <code>img</code> tags en voeg in plaats daarvan de juiste class toe.
+
+    </p>
+
+    <div class="accordion" id="moreTextHint">
+        <div class="card collapseCard">
+            <button class="btn collapseButton" type="button" data-toggle="collapse" data-target="#collapseMoreTextHint" aria-expanded="true" aria-controls="collapseMoreTextHint">
+                  <div class="card-header collapseHeader" id="headingMoreTextHint">
+                    <h2 class="mb-0">
+                      <img src="images/hint.svg" alt="" class="left small-icon"/>
+                      <span class="collapseText left">Geef me een hint</span>
+                      <i class="fas fa-angle-down collapseIcon"></i>
+                    </h2>
+                  </div>
+                </button>
+
+            <div id="collapseMoreTextHint" class="collapse hide" aria-labelledby="headingMoreTextHint" data-parent="#moreTextHint">
+                <div class="card-body">
+
+                    <p>
+                        Je kan een CSS class maken die alleen de width (breedte) van een element definieert, zoals dit:
+                    </p>
+                    <div class="codeblock">
+                        <code style="background-color:black;">
+                        <span class="purple">.kleineAfbeelding</span> { <br />
+                        <span style="padding-left:24px;"><span class="oker">width</span>: 100px;<br /></span>
+                        }<br />
+                      </code>
+                    </div>
+
+                    <p>
+                      En zo ziet de <code>img</code> tag met het <code>width</code> attribuut eruit:
+                    </p>
+                    <div class="codeblock">
+                        <code style="background-color:black;">
+                        &lt;<span class="pink">img src</span>="<span class="green">tito.png</span>" <span class="pink">alt</span>="<span class="green">Tito de hond</span>" <span class="pink">width</span>="<span class="green">100px</span>" /&gt;
+                      </code>
+                    </div>
+
+                    <p>
+                      Als je het <code>width</code> attribuut weghaalt en de grootte van de afbeelding bepaalt met de CSS klasse, ziet het er zo uit:
+                    </p>
+                    <div class="codeblock">
+                        <code style="background-color:black;">
+                        &lt;<span class="pink">img src</span>="<span class="green">tito.png</span>" <span class="pink">class</span>="<span class="green">smallPictures</span>" <span class="pink">alt</span>="<span class="green">Tito de hond</span>" /&gt;
+                      </code>
+                    </div>
+                    <p>
+                      Door een CSS class te gebruiken kan je gemakkelijk de breedte van alle afbeeldingen in één keer veranderen. Je hoeft hiervoor maar één regel code te veranderen in je stijlregels!
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="buttonbar">
         <button id="back" data-item="organise.html" onclick="handleMenuClick(this)">
           <img src="images/back.svg" alt="" />
         </button>
         <button id="next" data-item="indiv.html" onclick="handleMenuClick(this)">
-          Je eigen style
+          Je eigen stijl
           <i class="fas fa-angle-right"></i>
         </button>
     </div>

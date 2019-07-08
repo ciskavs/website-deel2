@@ -2,20 +2,168 @@
 <html lang="nl">
 
 <head>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
 </head>
 
 <body>
-    <h2>Je eigen style</h2>
-    <p></p>
+    <h2>Je eigen stijl</h2>
+    <p>
+        Laten we de Home pagina een beetje opleuken! Met een andere soort CSS selector kan je een unieke set CSS regels toepassen op slechts <strong>één specifiek element</strong>.
+    </p>
+
+    <ul>
+        <li>
+            Ga naar <code>index.html</code> en zoek een alinea (<code>p</code>) element, of voeg er een toe als je er geen hebt. Voeg het volgende <strong>attribuut</strong> toe aan de tag:
+        </li>
+    </ul>
+    <div class="codeblock">
+        <code style="background-color:black;">
+          &lt;<span class="pink">p id</span>="<span class="green">mijnCooleTekst</span>"&gt;<br />
+          <span style="padding-left:24px;">Mijn website gaat over Leiden.</span><br />
+          &lt;/<span class="pink">p</span>&gt;
+        </code>
+    </div>
+
+    <p>
+        Het <code>id</code> is een naam die je een bepaald element geeft om het te herkennen. Er mogen nooit twee of meer elementen op een pagina zijn met hetzelfde <code>id</code>!
+    </p>
+
+    <ul>
+        <li>
+            Ga nu naar je stijlregels <code>styles.css</code>en voeg de volgende code toe:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">#mijnCooleTekst</span> { <br />
+        <span style="padding-left:24px;"><span class="oker">color</span>: #003366;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border</span>: 2px ridge #ccffff;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">padding</span>: 15px;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">text-align</span>: center;<br /></span>
+        }<br />
+      </code>
+    </div>
+
+    <p>
+        Je tekst zou er nu zo uit moeten zien:
+    </p>
+    <img src="images/coole-tekst.png" alt="" class="img-responsive">
+    <br />
+
+    <p>
+        Een selector met een <code>#</code> ervoor wordt gebruikt om CSS-regels toe te passen op een specifiek element op je website. Je geeft de naam op van het <code>id</code> attribuut van het element.
+    </p>
+
+    <ul>
+        <li>
+            Laten we er een doen voor de <code>body</code> van de Home pagina. Ga naar <code>index.html</code> en voeg een <code>id</code> toe aan de <code>body</code> tag.
+        </li>
+    </ul>
+    <div class="codeblock">
+        <code style="background-color:black;">
+          &lt;<span class="pink">body id</span>="<span class="green">voorpagina</span>"&gt;<br />
+        </code>
+    </div>
+
+    <ul>
+        <li>
+            Voeg in <code>styles.css</code> de volgense CSS regel toe:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">#voorpagina</span> { <br />
+        <span style="padding-left:24px;"><span class="oker">background</span>: #48D1CC;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">background</span>: linear-gradient(#fea3aa, #f8b88b, #faf884, #baed91, #baed91, #b2cefe, #f2a2e8, #fea3aa);<br /></span>
+        }<br />
+      </code>
+    </div>
+    <br />
+
+    <p>
+        Je zou iets moeten krijgen dat er zo uitziet:
+    </p>
+
+    <img src="images/voorpagina.png" alt="" class="img-responsive">
+    <br />
+
+    <p>
+        Je hebt net een <strong>verloop</strong> gebruikt! Dat is de naam die wordt gegeven aan het effect waarbij de ene kleur vervaagt in de andere. <br /> Opmerking: de eerste <code>background</code> eigenschap boven het verloop bepaalt een standaardkleur
+        voor browsers die geen verloop ondersteunen.
+    </p>
+    <p>
+        Als je de code perfect hebt overgetypt en je hebt het mooie regenboogeffect hierboven niet gekregen, kan het zijn dat je browser geen verloop ondersteunt.
+    </p>
+    <p>
+        Je kunt veel verschillende effecten maken met verlopen. Ga <a href="https://www.w3schools.com/css/css3_gradients.asp" target="_blank">hier</a> naartoe als je meer wilt weten.
+    </p>
+
+    <h3>Uitdaging: nog meer elementen opmaken</h3>
+    <p>
+      Probeer een ander element een <code>id</code> te geven en maak dat element op met behulp van de ID selector met een <code>#</code>
+      zoals hierboven. Wat dacht je ervan om een afbeelding een <code>border-radius</code> van <code>100%</code> te geven, zodat 'ie helemaal rond is?
+      Alle andere afbeeldingen op de website blijven hetzelfde als ze zijn.
+    </p>
+    <img src="images/tito-rond.png" alt="" class="img-responsive">
+    <br />
+
+    <div class="accordion" id="moreTextHint">
+        <div class="card collapseCard">
+            <button class="btn collapseButton" type="button" data-toggle="collapse" data-target="#collapseMoreTextHint" aria-expanded="true" aria-controls="collapseMoreTextHint">
+                  <div class="card-header collapseHeader" id="headingMoreTextHint">
+                    <h2 class="mb-0">
+                      <img src="images/hint.svg" alt="" class="left small-icon"/>
+                      <span class="collapseText left">Geef me een hint</span>
+                      <i class="fas fa-angle-down collapseIcon"></i>
+                    </h2>
+                  </div>
+                </button>
+
+            <div id="collapseMoreTextHint" class="collapse hide" aria-labelledby="headingMoreTextHint" data-parent="#moreTextHint">
+                <div class="card-body">
+                  <p>
+                    Je geeft een element een <code>id</code> door het <code>id</code> attribuut aan de HTML tag te geven, zoals hier:
+                  </p>
+
+                  <div class="codeblock">
+                      <code style="background-color:black;">
+                      &lt;<span class="pink">img src</span>="<span class="green">tito.png</span>" <span class="pink">id</span>="<span class="green">rondeAfbeelding</span>" <span class="pink">alt</span>="<span class="green">Tito de hond</span>" /&gt;
+                    </code>
+                  </div>
+
+                  <p>
+                    Kies een naam voor <code>id</code> die je leuk vindt.
+                  </p>
+
+                  <p>
+                    Om de stijlregels voor een specifiek element te bepalen gebruik je het <code>#</code> symbool en de naam die je aan het <code>id</code> gaf.
+                  </p>
+
+                  <div class="codeblock">
+                      <code style="background-color:black;">
+                      <span class="purple">#rondeAfbeelding</span> { <br />
+                      <span style="padding-left:24px;"><span class="oker">border-radius</span>: 100%;<br /></span>
+                      }<br />
+                    </code>
+                  </div>
+
+                  <p>
+                    Opmerking: de naam die je vóór de CSS regel typt moet <strong>precies</strong> gelijk zijn aan de naam die je in het <code>id</code> attribuut van het element zet.
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="buttonbar">
         <button id="back" data-item="themes.html" onclick="handleMenuClick(this)">
           <img src="images/back.svg" alt="" />
         </button>
         <button id="next" data-item="other.html" onclick="handleMenuClick(this)">
-          Code op een andere website bekijken
+          Code van een andere website
           <i class="fas fa-angle-right"></i>
         </button>
     </div>
