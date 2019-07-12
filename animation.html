@@ -2,13 +2,169 @@
 <html lang="nl">
 
 <head>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
 </head>
 
 <body>
     <h2>Animaties</h2>
-    <p></p>
+    <p>
+        Wist je dat je CSS kunt gebruiken om dingen te laten bewegen? Hier ga je het leren!
+    </p>
+
+    <ul>
+        <li>
+            Zorg voordat je begint dat je een afbeelding op je website hebt met een <code>id</code> en een CSS-blok die de
+            <code>width</code> op <code>100px</code> zet. In dit voorbeeld gebruiken we de afbeelding van Tito. Het CSS-blok ziet er zo uit:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">#fotoTito</span> { <br />
+        <span style="padding-left:24px;"><span class="oker">width</span>: 100px;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border-radius</span>: 100%;<br /></span>
+        }<br />
+      </code>
+    </div>
+
+    <ul>
+        <li>
+            Voeg onderaan je CSS-bestand <code>styles.css</code> de volgende code toe:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">@keyframes mijnEersteAnimatie</span> { <br />
+        <span class="purple" style="padding-left:24px;">from</span> { <br />
+        <span style="padding-left:48px;"><span class="oker">width</span>: 100px;<br /></span>
+        <span style="padding-left:24px;">}</span><br />
+        <span class="purple" style="padding-left:24px;">to</span> { <br />
+        <span style="padding-left:48px;"><span class="oker">width</span>: 300px;<br /></span>
+        <span style="padding-left:24px;">}</span><br />
+        }<br />
+      </code>
+    </div>
+
+    <p>
+        Deze code maakt een animatie met de naam <code>mijnEersteAnimatie</code> die je kan toevoegen aan elk element op je website. Wat denk je dat het zal doen?
+    </p>
+    <ul>
+        <li>
+            Zoek de CSS-regels voor de afbeelding en voeg de volgende drie eigenschappen toe:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="oker">animation-name</span>: mijnEersteAnimatie;<br />
+        <span class="oker">animation-duration</span>: 2s;<br />
+        <span class="oker">animation-iteration-count</span>: 1;<br />
+      </code>
+    </div>
+
+    <ul>
+        <li>
+            Kijk nu wat er gebeurt op je webpagina! Probeer verschillende waarden voor <code>animation-iteration-count</code> om te zien wat het doet.
+        </li>
+        <li>
+            Laten we een andere animatie proberen! Voeg de volgende code toe aan het einde van uw CSS-bestand:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">@keyframes regenboogGloed</span> { <br />
+        <span class="purple" style="padding-left:24px;">0%</span> { <br />
+        <span style="padding-left:48px;"><span class="oker">color</span>: #FFD700;<br /></span>
+        <span style="padding-left:24px;">}</span><br />
+        <span class="purple" style="padding-left:24px;">50%</span> { <br />
+        <span style="padding-left:48px;"><span class="oker">color</span>: #663399;<br /></span>
+        <span style="padding-left:24px;">}</span><br />
+        <span class="purple" style="padding-left:24px;">100%</span> { <br />
+        <span style="padding-left:48px;"><span class="oker">color</span>: #FFD700;<br /></span>
+        <span style="padding-left:24px;">}</span><br />
+        }<br />
+      </code>
+    </div>
+
+    <ul>
+        <li>
+            Zoek nu de <code>#mijnCooleTekst</code> CSS-regels die je eerder maakte en voeg de animatiecode toe:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">#mijnCooleTekst</span> { <br />
+        <span style="padding-left:24px;"><span class="oker">color</span>: #003366;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border</span>: 2px ridge #ccffff;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">padding</span>: 15px;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">text-align</span>: center;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">animation-name</span>: regenboogGloed;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">animation-duration</span>: 1.5s;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">animation-iteration-count</span>: 1;<br /></span>
+        }<br />
+      </code>
+    </div>
+
+    <p>
+        Als je <strong>percentages</strong> gebruikt in plaats van <code>from</code> en <code>to</code>, kan je zowel tussenwaarden instellen als alleen begin- en eindwaarden. Je kan zoveel tussenliggende waarden instellen als je wil, met gebruik van
+        verschillende percentages van <code>0</code> helemaal tot <code>100</code>.
+    </p>
+
+    <ul>
+        <li>
+            Wijzig de waarde van <code>animation-iteration-count</code> in <code>infinite</code>. Kijk of je kunt raden wat er zal gebeuren voordat je het test!
+        </li>
+        <li>
+            Probeer verschillende waarden uit voor de <code>animation-duration</code> om je animatie te versnellen of te vertragen.
+        </li>
+        <li>
+            Een laatste truc! Voeg deze animatiecode toe:
+        </li>
+    </ul>
+
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">@keyframes slide</span> { <br />
+        <span class="purple" style="padding-left:24px;">0%</span> { <br />
+        <span style="padding-left:48px;"><span class="oker">background-position-x</span>: 0;<br /></span>
+        <span style="padding-left:24px;">}</span><br />
+        <span class="purple" style="padding-left:24px;">100%</span> { <br />
+        <span style="padding-left:48px;"><span class="oker">background-position-x</span>: 600vw;<br /></span>
+        <span style="padding-left:24px;">}</span><br />
+        }<br />
+      </code>
+    </div>
+
+    <ul>
+        <li>
+            Zoek nu de <code>#voorPagina</code> CSS-regels die je eerder hebt geschreven en wijzig deze in:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+      <code style="background-color:black;">
+        <span class="purple">#voorPagina</span> { <br />
+        <span style="padding-left:24px;"><span class="oker">background</span>: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, cyan 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);<br /></span>
+        <span style="padding-left:24px;"><span class="oker">background-size</span>: 600vw 600vw;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">animation</span>: slide 10s infinite linear forwards;<br /></span>
+        }<br />
+      </code>
+    </div>
+
+    <p>
+        Maak je geen zorgen over het begrijpen van alle bovenstaande code ... gewoon achterover leunen en genieten !!
+    </p>
+    <p>
+        Ga naar <a href src="https://www.w3schools.com/css/css3_animations.asp" target="_blank">deze webpagina</a> voor meer informatie over meer dingen die je met animatie kunt doen. Veel plezier!
+    </p>
+    <p>
+        In de volgende stap leer je hoe je leuke dingen kunt laten gebeuren als je met de muis over dingen beweegt!
+    </p>
 
     <div class="buttonbar">
         <button id="back" data-item="adjustsize.html" onclick="handleMenuClick(this)">
