@@ -2,13 +2,101 @@
 <html lang="nl">
 
 <head>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
 </head>
 
 <body>
     <h2>Grootte aanpassen</h2>
-    <p></p>
+    <p>
+        Tot nu toe gebruikte je <strong>pixels</strong> om de grootte van dingen in te stellen, bijvoorbeeld <code>10px</code>. Hier leer je over andere maten die je kan gebruiken.
+    </p>
+
+    <ul>
+        <li>
+            Ga naar <code>index.html</code> en zoek het <code>img</code> element met de afbeelding van Tito of zoek een andere <code>img</code> tag op uw website.
+        </li>
+        <li>
+            Verwijder het attribuut <code>width</code> als dit er nog staat en geef het element een <code>id</code> als het er nog geen heeft.
+        </li>
+    </ul>
+    <div class="codeblock">
+        <code style="background-color:black;">
+        &lt;<span class="pink">img src</span>="<span class="green">tito.png</span>" <span class="pink">id</span>="<span class="green">fotoTito</span>" <span class="pink">alt</span>="<span class="green">Tito de hond</span>" /&gt;
+      </code>
+    </div>
+
+    <ul>
+        <li>
+            Zet in je CSS-bestand de eigenschap <code>width</code> voor je afbeelding, zoals hieronder weergegeven (misschien moet je het CSS-blok met de <code>id</code> selector maken als je dit nog niet eerder hebt gedaan).
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="purple">#fotoTito</span> { <br />
+        <span style="padding-left:24px;"><span class="oker">width</span>: 50%;<br /></span>
+        <span style="padding-left:24px;"><span class="oker">border-radius</span>: 100%;<br /></span>
+        }<br />
+      </code>
+    </div>
+
+    <p>
+        Opmerking: 50% (50%) is de <strong>helft</strong>.
+    </p>
+
+    <ul>
+        <li>
+            Probeer het formaat van je browservenster aan te passen en kijk wat er met de foto gebeurt.
+        </li>
+    </ul>
+    <p>
+        Je zou moeten zien dat de foto groter en kleiner wordt als je het venster groter en kleiner maakt. Dat komt omdat het 50% van de breedte van het <code>main</code> element in beslag neemt (wat ongeveer de breedte van de pagina is).
+    </p>
+
+    <div class="accordion" id="pixelsExplained">
+        <div class="card collapseCard">
+            <button class="btn collapseButton" type="button" data-toggle="collapse" data-target="#collapsePixelsExplained" aria-expanded="true" aria-controls="collapsePixelsExplained">
+              <div class="card-header collapseHeader" id="headingPixelsExplained">
+                <h2 class="mb-0">
+                  <img src="images/info.svg" alt="" class="left small-icon"/>
+                  <span class="collapseText left">Hoe werken pixels en percentages?</span>
+                  <i class="fas fa-angle-down collapseIcon"></i>
+                </h2>
+              </div>
+            </button>
+
+            <div id="collapsePixelsExplained" class="collapse hide" aria-labelledby="headingPixelsExplained" data-parent="#pixelsExplained">
+                <div class="card-body">
+                    <p>
+                        Als je de grootte van iets in pixels instelt, stel je een exacte grootte in en deze verandert niet.
+                        Dit wordt een <strong>absolute</strong> maat genoemd.
+                    </p>
+                    <p>
+                        Een andere manier om de grootte van dingen in te stellen, is door <strong>relatieve</strong> metingen te gebruiken,
+                         zodat de grootte afhangt van hoe groot elementen zijn in vergelijking met elkaar. Als dan één ding in grootte verandert,
+                          verandert ook de grootte van al het andere automatisch om dezelfde <strong>verhoudingen</strong> te behouden.
+                    </p>
+                    <p>
+                        Als je <strong>relatieve</strong> metingen gebruikt, is het belangrijk om te weten wat de <strong>parent</strong> (ouder)
+                        van dat element is. De 'parent' is het ding waar jouw element in zit en dat is waar de maat in verhouding toe staat.
+                        Voorbeeld: de 'parent' van het plaatje hierboven is het <code>&lt;article&gt;</code> element, omdat het <code>img</code>
+                        element tussen de <code>&lt;article&gt;</code><code>&lt;/article&gt;</code> tags staat.
+                    </p>
+                    <p>
+                        Als je de <strong>width</strong> van een element instelt op <code>100%</code>, heeft dit dezelfde breedte als
+                        de 'parent' waar het in staat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+      <li>
+        Experimenteer met verschillende waarden voor het <code>%</code>.
+      </li>
+    </ul>
 
     <div class="buttonbar">
         <button id="back" data-item="other.html" onclick="handleMenuClick(this)">

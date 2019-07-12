@@ -2,13 +2,132 @@
 <html lang="nl">
 
 <head>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/contentStyles.css">
 </head>
 
 <body>
     <h2>Code van een andere website</h2>
-    <p></p>
+    <p>
+        <strong>Opmerking</strong>: voor deze stap heb je Chrome, Firefox of Internet Explorer/Edge nodig. Als je geen van deze browsers hebt, kun je doorgaan met de volgende stap 'Grootte aanpassen'.
+    </p>
+
+    <p>
+        Op deze kaart leer je hoe je een kijkje kunt nemen in de code van een website met behulp van de <strong>inspector tool</strong> (pagina inspecteur). Je leert ook hoe je wijzigingen kan aanbrengen die alleen jij kan zien!
+    </p>
+
+    <ul>
+        <li>
+            Zorg voordat je begint dat je project is opgeslagen. Vernieuw vervolgens je website door op het verversen pictogram in je browser te klikken. Dit 'pijl-in-cirkel' pictogram vind je links naar het adres van de website.
+        </li>
+        <li>
+            Markeer op je webpagina (de eigenlijke pagina, niet de code) de tekst met de rand die je in de vorige stap hebt toegevoegd, klik er met de rechtermuisknop op en selecteer de optie Inspecteren in het menu dat verschijnt. (De optie kan 'element controleren',
+            'element inspecteren', 'inspect' of iets dergelijks worden genoemd, afhankelijk van welke browser je gebruikt. Als je deze menuoptie niet kunt vinden, vraag dan aan een van de mentoren om hulp.)
+        </li>
+    </ul>
+
+    <img src="images/inspector.png" alt="" class="img-responsive">
+    <br />
+
+    <p>
+        Een nieuw venster verschijnt in je webbrowser met veel tabbladen en code: de <strong>developer tools</strong> (ontwikkelaarstools) of kortweg <strong>dev-tools</strong>. Hier kan je de code zien voor het item waarop je hebt geklikt, evenals de
+        code voor de hele pagina!
+    </p>
+
+    <h3>De HTML-code inspecteren</h3>
+
+    <ul>
+        <li>
+            Zoek naar het tabblad met de HTML-code voor de pagina (dit kan 'Elementen' of 'Inspector' worden genoemd). De code moet er ongeveer hetzelfde uitzien als hoe je hem in je HTML-bestand hebt getypt! Je kan op de kleine driehoekjes aan de rechterkant klikken
+            om de verborgen code uit te vouwen.
+        </li>
+        <img src="images/inspect-text.png" alt="" class="img-responsive">
+        <li>
+            Dubbelklik op de tekst tussen de tags. Je zou het nu moeten kunnen bewerken! Typ iets in en druk op Enter.
+        </li>
+        <img src="images/inspect-text-edit.png" alt="" class="img-responsive">
+        <li>
+            Zie je de tekstupdate op je website? Opmerking: alleen jij kan deze wijzigingen zien.
+        </li>
+        <img src="images/inspect-text-edit-result.png" alt="" class="img-responsive">
+
+        <li>
+            <strong>Laad</strong> nu de pagina <strong>opnieuw</strong> en kijk wat er gebeurt. Je wijzigingen moeten verdwijnen!
+        </li>
+        <li>
+            Klik in de linkerbovenhoek van het vak Dev-tools op het pictogram dat lijkt op een kleine rechthoek met een pijl. Nu kan je de cursor over de webpagina bewegen en de HTML-inspecteur toont je de code die deze beschrijft.
+        </li>
+        <img src="images/inspect-element.png" alt="" class="img-responsive"><br />
+        <img src="images/inspect-element-result.png" alt="" class="img-responsive">
+    </ul>
+
+    <h3>De CSS-code inspecteren</h3>
+
+    <ul>
+        <li>
+            Laten we de CSS-code eens bekijken. Zoek naar het tabblad <strong>Stijlen</strong> in de dev-tools (dit kan 'Stijleditor', 'Styles' of iets dergelijks worden genoemd). Je zou een aantal CSS-regels moeten zien, inclusief degenen die je voor
+            die paragraaf hebt gemaakt, zoals <code>#myCoolText</code>.
+        </li>
+        <img src="images/css-mijncooletekst.png" alt="" class="img-responsive">
+        <li>
+            Klik in de regels <code>#myCoolText</code> op de waarde naast de eigenschap <code>color</code>. Probeer een andere waarde in te typen. Kijk hoe de tekst op je webpagina van kleur verandert!
+        </li>
+        <img src="images/css-mijncooletekst-edit.png" alt="" class="img-responsive">
+    </ul>
+
+    <p>
+        Opmerking: je kan ook op het gekleurde vierkant klikken om de kleur te wijzigen met behulp van een hulpmiddel voor kleurenkiezers.
+    </p>
+
+    <ul>
+        <li>
+            Klik in de ruimte achter de kleur. Er begint een nieuwe regel, waarin je meer CSS kunt typen. Typ het volgende en druk op Enter:
+        </li>
+    </ul>
+    <div class="codeblock">
+        <code style="background-color:black;">
+        <span class="oker">background-color</span>: #660066;<br />
+      </code>
+    </div>
+    <p>
+        Als het goed is, is de achtergrond van dat stuk tekst is veranderd.
+    </p>
+    <img src="images/css-achtergrond.png" alt="" class="img-responsive"> <br />
+    <img src="images/css-achtergrond-paars.png" alt="" class="img-responsive">
+
+    <div class="accordion" id="devToolsExplained">
+        <div class="card collapseCard">
+            <button class="btn collapseButton" type="button" data-toggle="collapse" data-target="#collapseDevToolsExplained" aria-expanded="true" aria-controls="collapseDevToolsExplained">
+              <div class="card-header collapseHeader" id="headingDevToolsExplained">
+                <h2 class="mb-0">
+                  <img src="images/info.svg" alt="" class="left small-icon"/>
+                  <span class="collapseText left">Hoe dev-tools werkt</span>
+                  <i class="fas fa-angle-down collapseIcon"></i>
+                </h2>
+              </div>
+            </button>
+            <div id="collapseDevToolsExplained" class="collapse hide" aria-labelledby="headingDevToolsExplained" data-parent="#devToolsExplained">
+                <div class="card-body">
+                    <p>
+                        Als je de websitecode wijzigt met behulp van de dev-tools, wijzig je tijdelijk hoe het in je browser eruit ziet. Je verandert eigenlijk niet de bestanden waaruit de website bestaat.
+                    </p>
+                    <p>
+                        Als je de pagina vernieuwt, laad je de website opnieuw op vanuit de bestanden (op internet of op je computer). Dat is waarom je veranderingen verdwijnen.
+                    </p>
+                    <p>
+                        Nu je dat weet, kun je plezier beleven aan het knoeien met de code op andere websites!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+      <li>
+        Probeer deze tools te gebruiken om de code op een andere website te bekijken. Je kunt zelfs wijzigingen aanbrengen als je wilt!
+        Vergeet niet dat alleen jij de wijzigingen kan zien die je aanbrengt en dat alles wordt gereset wanneer je de pagina vernieuwt.
+      </li>
+    </ul>
 
     <div class="buttonbar">
         <button id="back" data-item="indiv.html" onclick="handleMenuClick(this)">
