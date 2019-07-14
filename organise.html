@@ -15,7 +15,7 @@
 
     <ul>
         <li>
-            Ga naar het bestand <code>attractions.html</code> (of een van je eigen pagina's als je het voorbeeldproject niet gebruikt) en typ onder de opening <code>&lt;main&gt;</code> tag, het volgende op een nieuwe regel:
+            Ga naar het bestand <code>attracties.html</code> (of een van je eigen pagina's als je het voorbeeldproject niet gebruikt) en typ <strong>onder</strong> de openings <code>&lt;main&gt;</code> tag, het volgende op een nieuwe regel:
         </li>
     </ul>
 
@@ -28,7 +28,7 @@
 
     <ul>
         <li>
-            Als Trinket automatisch een afsluitende <code>&lt;/article&gt;</code> tag heeft toegevoegd, haal die dan weg.
+            Als Trinket automatisch een afsluitende <code>&lt;/article&gt;</code> tag heeft toegevoegd, haal die dan weg. Deze moet namelijk op een andere plek komen te staan.
         </li>
         <li>
             Onderaan het bestand, net <strong>boven</strong> de afsluitende <code>&lt;/main&gt;</code> tag, voeg je een nieuwe regel toe en sluit je het <code>&lt;article&gt;</code> element:
@@ -48,21 +48,177 @@
         <code style="background-color:black;">
           &lt;<span class="pink">main</span>&gt;<br />
           <span style="padding-left:24px;">&lt;<span class="pink">article</span>&gt;</span><br />
-          <span style="padding-left:48px;">&lt;<span class="pink">h1</span>&gt;</span>Welkom in Leiden!&lt;/<span class="pink">h1</span>&gt;<br />
-          <span style="padding-left:48px;">&lt;<span class="pink">p</span>&gt;</span><br />
-          <span style="padding-left:72px;">Mijn website gaat over Leiden.</span><br />
-          <span style="padding-left:48px;">&lt;/<span class="pink">p</span>&gt;</span><br />
-          <span style="padding-left:48px;">&lt;<span class="pink">p</span>&gt;</span><br />
-          <span style="padding-left:72px;">Klik op de links in het bovenstaande menu en ontdek wat er te beleven is op deze site!</span><br />
-          <span style="padding-left:48px;">&lt;/<span class="pink">p</span>&gt;</span><br />
-          <span style="padding-left:48px;">&lt;<span class="pink">img src</span>="<span class="green">tito.png</span>" <span class="pink">alt</span>="<span class="green">Tito the dog</span>" <span class="pink">width</span>="<span class="green">100px</span>"  /&gt;</span><br />
-          <span style="padding-left:48px;">&lt;<span class="pink">p</span>&gt;</span><br />
-          <span style="padding-left:72px;">Dit is Tito. Hij is je gids. Zoals je ziet, houdt Tito van CoderDojo.</span><br />
-          <span style="padding-left:48px;">&lt;/<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:48px;">&lt;<span class="pink">h1</span>&gt;</span>Mijn favoriete plekken in Leiden&lt;/<span class="pink">h1</span>&gt;<br />
+          <span style="padding-left:72px;">&lt;<span class="pink">h2</span>&gt;</span>De burcht&lt;/<span class="pink">h2</span>&gt;<br />
+          <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:96px;">De burcht staat midden in Leiden op een heuvel die door mensen is gemaakt.</span><br />
+          <span style="padding-left:96px;">Je kunt naar boven klimmen en vandaar de hele stad zien!</span><br />
+          <span style="padding-left:72px;">&lt;/<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:72px;">&lt;<span class="pink">img src</span>="<span class="green">burcht.jpg</span>" <span class="pink">alt</span>="<span class="green">De burcht in leiden</span>" <span class="pink">height</span>="<span class="green">200px</span>"  /&gt;</span><br />
+          <span style="padding-left:72px;">&lt;<span class="pink">h2</span>&gt;</span>Museum Naturalis&lt;/<span class="pink">h2</span>&gt;<br />
+          <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:96px;">Natuurhistorisch museum Naturalis heeft verschillende opgezette dieren </span><br />
+          <span style="padding-left:96px;">en gedroogde planten, maar ook veel mineralen, edelstenen, fossielen.</span><br />
+          <span style="padding-left:96px;">En natuurlijk een coole dino!</span><br />
+          <span style="padding-left:72px;">&lt;/<span class="pink">p</span>&gt;</span><br />
+          <span style="padding-left:72px;">&lt;<span class="pink">img src</span>="<span class="green">naturalis.jpg</span>" <span class="pink">alt</span>="<span class="green">Dinosaurus Trix</span>" <span class="pink">height</span>="<span class="green">200px</span>"  /&gt;</span><br />
           <span style="padding-left:24px;">&lt;/<span class="pink">article</span>&gt;</span><br />
           &lt;/<span class="pink">main</span>&gt;
         </code>
     </div>
+
+    <ul>
+        <li>
+            Bekijk nu de inhoud van je <code>article</code> en probeer het op te splitsen in secties. Plaats dit nieuwe paar tags rond elk deel:
+            <code>&lt;section&gt;&lt;/section&gt;</code>. Hier is een voorbeeld van hoe het eruit zou kunnen zien:
+        </li>
+    </ul>
+
+    <div class="codeblock">
+        <code style="background-color:black;">
+        &lt;<span class="pink">article</span>&gt;</span><br />
+        <span style="padding-left:24px;">&lt;<span class="pink">h1</span>&gt;</span>Mijn favoriete plekken in Leiden&lt;/<span class="pink">h1</span>&gt;<br />
+        <span style="padding-left:24px;">&lt;<span class="pink">section</span>&gt;</span><br />
+        <span style="padding-left:48px;">&lt;<span class="pink">h2</span>&gt;</span>De burcht&lt;/<span class="pink">h2</span>&gt;<br />
+        <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+        <span style="padding-left:72px;">De burcht staat midden in Leiden op een heuvel die door mensen is gemaakt.</span><br />
+        <span style="padding-left:72px;">Je kunt naar boven klimmen en vandaar de hele stad zien!</span><br />
+        <span style="padding-left:48px;">&lt;/<span class="pink">p</span>&gt;</span><br />
+        <span style="padding-left:48px;">&lt;<span class="pink">img src</span>="<span class="green">burcht.jpg</span>" <span class="pink">alt</span>="<span class="green">De burcht in leiden</span>" <span class="pink">height</span>="<span class="green">200px</span>"  /&gt;</span><br />
+        <span style="padding-left:24px;">&lt;/<span class="pink">section</span>&gt;</span><br />
+        <span style="padding-left:24px;">&lt;<span class="pink">section</span>&gt;</span><br />
+        <span style="padding-left:48px;">&lt;<span class="pink">h2</span>&gt;</span>Museum Naturalis&lt;/<span class="pink">h2</span>&gt;<br />
+        <span style="padding-left:48px;">&lt;<span class="pink">p</span>&gt;</span><br />
+        <span style="padding-left:72px;">Natuurhistorisch museum Naturalis heeft verschillende opgezette dieren </span><br />
+        <span style="padding-left:72px;">en gedroogde planten, maar ook veel mineralen, edelstenen, fossielen.</span><br />
+        <span style="padding-left:72px;">En natuurlijk een coole dino!</span><br />
+        <span style="padding-left:48px;">&lt;/<span class="pink">p</span>&gt;</span><br />
+        <span style="padding-left:48px;">&lt;<span class="pink">img src</span>="<span class="green">naturalis.jpg</span>" <span class="pink">alt</span>="<span class="green">Dinosaurus Trix</span>" <span class="pink">height</span>="<span class="green">200px</span>"  /&gt;</span><br />
+        <span style="padding-left:24px;">&lt;/<span class="pink">section</span>&gt;</span><br />
+        <span>&lt;/<span class="pink">article</span>&gt;</span><br />
+      </code>
+    </div>
+
+
+    <div class="accordion" id="newTagsExplained">
+        <div class="card collapseCard">
+            <button class="btn collapseButton" type="button" data-toggle="collapse" data-target="#collapseNewTagsExplained" aria-expanded="true" aria-controls="collapseNewTagsExplained">
+              <div class="card-header collapseHeader" id="headingNewTagsExplained">
+                <h2 class="mb-0">
+                  <img src="images/info.svg" alt="" class="left small-icon"/>
+                  <span class="collapseText left">Wat zijn deze nieuwe tags?</span>
+                  <i class="fas fa-angle-down collapseIcon"></i>
+                </h2>
+              </div>
+            </button>
+
+            <div id="collapseNewTagsExplained" class="collapse hide" aria-labelledby="headingNewTagsExplained" data-parent="#newTagsExplained">
+                <div class="card-body">
+                    <p>
+                        Deze nieuwe elementen kun je zien als <strong>containers</strong>. Ze worden gebruikt om dingen samen te groeperen. Het is een beetje alsof je dingen in dozen op planken zet!
+                    </p>
+                    <p>
+                        Dit maakt je website vriendelijk voor schermlezers, geeft meer controle over de opmaak en, zoals je zal zien, kan je echt creatief worden met de styling.
+                    </p>
+                    <p>
+                        Je kan vanalles tussen de tags zetten. Meestal zal het meer dan één element zijn, maar dat hoeft niet. Het kunnen alle soorten HTML-elementen zijn. Wat je doet, is de browser laten weten dat alles tussen deze tags bij elkaar hoort.
+                    </p>
+
+                    <h3>Article</h3>
+                    <p>
+                        Het <code>article</code> element is een container voor een heel stuk inhoud, in dit geval informatie over attracties in Leiden. Als je verschillende stukjes inhoud hebt die geen verband houden, moet je ze allemaal in een eigen
+                        <code>article</code> element plaatsen in plaats van één set van tags om het geheel heen te plaatsen.
+                    </p>
+
+                    <h3>Section</h3>
+                    <p>
+                        Met het <code>section</code> element kun je verwante inhoud in kleinere delen verdelen en elk blok in een eigen container plaatsen.
+                    </p>
+
+                    <h3>Er zijn er nog meer!</h3>
+                    <p>
+                        Dit zijn niet de enige containerelementen in HTML. Als je ooit een menu hebt gemaakt en het vervolgens tussen de tags <code>&lt;nav&gt;&lt;/nav&gt;</code> hebt geplaatst, is dat een ander voorbeeld van een type container. Nog meer
+                        voorbeelden zijn: <code>&lt;main&gt;&lt;/main&gt;</code> en
+                        <code>&lt;header&gt;&lt;/header&gt;</code>. Kun je nog meer bedenken?
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        Je webpagina ziet er misschien nog niet zo anders uit, maar zodra de inhoud is georganiseerd in containertags, kan je er leuke dingen mee doen met CSS. Onthoud dat HTML bepaalt hoe je website is georganiseerd en CSS bepaalt hoe het eruit ziet.
+    </p>
+
+    <h3>Uitdaging: deel je website in</h3>
+
+    <ul>
+        <li>
+            Probeer op deze manier alle inhoud op je website in te delen met behulp van de <code>article</code> en <code>section</code> containers.
+        </li>
+    </ul>
+
+    <div class="accordion" id="organiseHint">
+        <div class="card collapseCard">
+            <button class="btn collapseButton" type="button" data-toggle="collapse" data-target="#collapseOrganiseHint" aria-expanded="true" aria-controls="collapseOrganiseHint">
+              <div class="card-header collapseHeader" id="headingOrganiseHint">
+                <h2 class="mb-0">
+                  <img src="images/hint.svg" alt="" class="left small-icon"/>
+                  <span class="collapseText left">Geef me een hint</span>
+                  <i class="fas fa-angle-down collapseIcon"></i>
+                </h2>
+              </div>
+            </button>
+
+            <div id="collapseOrganiseHint" class="collapse hide" aria-labelledby="headingOrganiseHint" data-parent="#organiseHint">
+                <div class="card-body">
+                    <p>
+                        Kijk naar de 'Eten in Leiden' pagina van het voorbeeldproject. Je ziet dat daar een <code>article</code> met een reeks <code>section</code> tags in het bestand <code>eten.html</code> zijn toegevoegd.
+                    </p>
+
+                    <div class="codeblock">
+                        <code style="background-color:black;">
+                        &lt;<span class="pink">main</span>&gt;</span><br />
+                        <span style="padding-left:24px;">&lt;<span class="pink">article</span>&gt;</span><br />
+                        <span style="padding-left:48px;">&lt;<span class="pink">h1</span>&gt;</span>Eten in Leiden&lt;/<span class="pink">h1</span>&gt;<br />
+                        <span style="padding-left:48px;">&lt;<span class="pink">p</span>&gt;</span><br />
+                        <span style="padding-left:72px;">Leiden is bekend om dit eten!</span><br />
+                        <span style="padding-left:48px;">&lt;/<span class="pink">p</span>&gt;</span><br />
+
+                        <span style="padding-left:48px;">&lt;<span class="pink">section</span>&gt;</span><br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">h2</span>&gt;</span>Hutspot&lt;/<span class="pink">h2</span>&gt;<br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+                        <span style="padding-left:96px;">Hutspot is een stamppot van aardappelen, wortelen en uien.</span><br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+                        <span style="padding-left:96px;">Het wordt elk jaar gegeten tijdens het Leidens ontzet op 3 oktober.</span><br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+                        <span style="padding-left:96px;">Klapstuk (rundvlees) maakt de maaltijd af!</span><br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+                        <span style="padding-left:48px;">&lt;/<span class="pink">section</span>&gt;</span><br />
+
+                        <span style="padding-left:48px;">&lt;<span class="pink">section</span>&gt;</span><br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">h2</span>&gt;</span>Haring en wittebrood&lt;/<span class="pink">h2</span>&gt;<br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+                        <span style="padding-left:96px;">Net als hutspot horen haring en wittebrood bij de traditie van Leidens ontzet.</span><br />
+                        <span style="padding-left:96px;">Ze worden elk jaar op 3 oktober in de Waag uitgedeeld aan de inwoners van Leiden.</span><br />
+                        <span style="padding-left:72px;">&lt;<span class="pink">p</span>&gt;</span><br />
+                        <span style="padding-left:48px;">&lt;/<span class="pink">section</span>&gt;</span><br />
+
+                        <span style="padding-left:24px;">&lt;/<span class="pink">article</span>&gt;</span><br />
+                        &lt;/<span class="pink">main</span>&gt;</span><br />
+                      </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        In de volgende stap ontwerp je een ander thema voor elke pagina die is ingedeeld in artikelen en secties!
+    </p>
 
     <div class="buttonbar">
         <button id="back" data-item="colors.html" onclick="handleMenuClick(this)">
